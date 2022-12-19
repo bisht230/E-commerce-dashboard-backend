@@ -7,6 +7,7 @@ const app = express()
 
 app.use(express.json())  //express.json() is the middleware which is used to give the body of the raw file
 app.use(cors())
+
 app.post("/signUp" , async (req,res) =>{
     const user = new User(req.body)
     let result = await user.save()
